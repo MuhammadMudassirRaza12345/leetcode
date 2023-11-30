@@ -37,10 +37,14 @@
 # sol
 class Solution(object):
     def twoSum(self, nums, target):
-        for i in range(len(nums)):
-            if nums[i] + nums[i+1] == target:
-                return [i,i+1]
-
+      for i in range(len(nums) -1):
+        for j in range(i+1,len(nums)):
+          return [i,j]
+solution_instance = Solution()
+nums = [2, 7, 11, 15]
+target = 9
+result = solution_instance.twoSum(nums, target)
+print(result)           
  
 
 # Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
